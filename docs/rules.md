@@ -1,32 +1,241 @@
-# Rules
-The game consists of 13 rounds. In each round, a player gets three rolls of the dice, although they can choose to end their turn after one or two rolls. After the first roll the player can save any dice they want and re-roll the other dice. This procedure is repeated after the second roll. The player has complete choice as to which dice to roll. It is possible to re-roll any dice that were or were not rolled before.
+# How to Play Yahtzee
+Roll dice for scoring combinations, and get the highest total score.
 
-The Yahtzee scorecard contains 13 different category boxes. After completing each round, a player must enter a score in one of these category boxes. The score entered in the box depends on how well the five dice match the scoring rule for the category. Once a score has been entered for a category, that category may not be used again by that player in that game. The game is completed after 13 rounds by each player, with each of the 13 boxes filled. The total score is calculated by summing all thirteen boxes, together with any bonuses.
+## Game Summary
+On each turn, roll the dice up to 3 times to get the highest scoring combination for one of 13 categories. After you finish rolling, you must place a score or a zero in one of the 13 category boxes on your score card. The game ends when all players have filled in their 13 boxes. Scores are totaled, including any bonus points. The player with the highest total wins.
+How to Play Each player takes a score card. To decide who goes first, each player in turn rolls all 5 dice. The player with the highest total goes first. Play then passes to the left.
 
-Details of the scoring rules for each category are given below. As an example, one of the categories is called Three of a Kind. The scoring rule for this category means that a player only scores if at least three of the five dice are the same value. If a player chooses to score a roll in this category even though they do not have at least three dice of the same value, their score will be 0.
+## Taking A Turn
+On your turn, you may roll the dice up to 3 times, although you may stop and score after your first or second roll. 
 
-The Yahtzee scorecard contains 13 scoring boxes divided into upper and lower sections.
+### First roll: 
+Roll all 5 dice. Set any “keepers” aside. You may stop and score now, or roll again.
 
-## Upper section
-In the upper section there are six boxes. The score in each of these boxes is determined by adding the total number of dice matching that box.
+### Second roll: 
+Reroll **ANY** or **ALL** dice you want. You don’t need to
+declare which combination you’re rolling for; you may change your mind after any roll. You may stop and score after your second roll, or set aside any “keepers” and roll a third time.
 
-| Category | Description      | Score                             | Example                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|----------|------------------|-----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Aces     | Any combination  | The sum of dice with the number 1 | ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tabler-icons_dice-1.svg/24px-Tabler-icons_dice-1.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tabler-icons_dice-1.svg/24px-Tabler-icons_dice-1.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tabler-icons_dice-1.svg/24px-Tabler-icons_dice-1.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Tabler-icons_dice-3.svg/24px-Tabler-icons_dice-3.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Tabler-icons_dice-4.svg/24px-Tabler-icons_dice-4.svg.png) scores 3 |
-| Twos     | Any combination  | The sum of dice with the number 2 | ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tabler-icons_dice-2.svg/24px-Tabler-icons_dice-2.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tabler-icons_dice-2.svg/24px-Tabler-icons_dice-2.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Tabler-icons_dice-2.svg/24px-Tabler-icons_dice-2.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tabler-icons_dice-5.svg/24px-Tabler-icons_dice-5.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Tabler-icons_dice-6.svg/24px-Tabler-icons_dice-6.svg.png) scores 6 |
-| Threes   | Any combination  | The sum of dice with the number 3 | ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Tabler-icons_dice-3.svg/24px-Tabler-icons_dice-3.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Tabler-icons_dice-3.svg/24px-Tabler-icons_dice-3.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Tabler-icons_dice-3.svg/24px-Tabler-icons_dice-3.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Tabler-icons_dice-3.svg/24px-Tabler-icons_dice-3.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Tabler-icons_dice-4.svg/24px-Tabler-icons_dice-4.svg.png) scores 12 |
-| Fours    | Any combination  | The sum of dice with the number 4 | ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Tabler-icons_dice-4.svg/24px-Tabler-icons_dice-4.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Tabler-icons_dice-4.svg/24px-Tabler-icons_dice-4.svg.png) ![](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Tabler-icons_dice-5.svg/24px-Tabler-icons_dice-5.svg.png) ... |
+### Third and final roll: 
+Reroll **ANY** or **ALL** dice you want. After your third roll, you must fill in a box on your score card with a score or a zero. After you fill in a box, your turn is over.
 
+## Scoring
+Scoresheet in the following image:
 
-If a player scores a total of 63 or more points in these six boxes, a bonus of 35 is added to the upper section score. Although 63 points corresponds to scoring exactly three-of-a-kind for each of the six boxes, a common way to get the bonus is by scoring four-of-a-kind for some numbers so that fewer of other numbers are needed. A player can earn the bonus even if they score a "0" in an upper section box.
+![image](./score_sheet.png)
 
-In order to gauge how well a player is doing in the upper section, they often refer to being "up" or "down" compared to the average of three required for each box. So that if a player scores four "sixes" they will be "6 up"; while if they then score just two "twos" they will then be only "4 up". Similarly, if a player starts with two "twos" they will be "2 down".
+When you are finished rolling, decide which box to fill in on your score card. For each game, there is a column of 13 boxes. You must fill in a box on each turn; if you can’t (or don’t want to) enter a score, you must enter a zero. Fill in each box only once, in any order, depending on your best scoring option.
 
-## Lower section
-The lower section contains a number of poker-themed categories with specific point values:
-| Category | Description     | Score                            | Example               |
-|----------|------------------|----------------------------------|------------------------|
-| Aces     | Any combination  | The sum of dice with the number 1 | ⚀ ⚀ ⚀ ⚂ ⚃ = 3 |
-| Twos     | Any combination  | The sum of dice with the number 2 | ⚁ ⚁ ⚁ ⚄ ⚅ = 6 |
-| Threes   | Any combination  | The sum of dice with the number 3 | ⚂ ⚂ ⚂ ⚂ ⚃ = 12|
-| Fours    | Any combination  | The sum of dice with the number 4 | ⚃ ⚃ ⚄ ⚄         |
+The score card is divided into an Upper Section and a Lower Section. Scoring combinations for each section are explained below. 
+
+| Upper Section |  What to Score        | 
+| --------------|-----------------------| 
+| Aces (Ones}   | Total of Aces only    | 
+| Twos          | Total of Twos only    | 
+| Threes        | Total of Threes only  | 
+| Fours         | Total of Fours only   | 
+| Fives         | Total of Fives only   | 
+| Sixes         | Total of Sixes only   | 
+
+To score in the Upper Section, add only the dice with the same number and enter the total in the appropriate box. For example, with the dice shown below you could score 9 in the Threes box, 2 in the Twos box or 5 in the Five box.
+> # ⚂ ⚂ ⚂ ⚁ ⚄
+Your goal in the Upper Section is to score a total of at least 63 points, to earn a 35-point bonus. The bonus points are based on scoring three of each number (Aces through Sixes); however, you may earn the bonus with any combination of scores totaling 63 points or more. 
+
+Each of the Lower Section scoring combinations is explained as follows. 
+| Lower Section         | What to Score         | 
+|-----------------------|-----------------------| 
+| 3 of a Kind           | Total of all 5 dice   | 
+| 4 ofa Kind            | Total of all 5 dice   | 
+| Full House            | 25 points             | 
+| Small Straight        | 30 points             | 
+| Large Straight        | 40 points             | 
+| YAHTZEE (5 ofa Kind)  | 50 points             | 
+| Chance                | Total of all 5 dice   | 
+
+### 3 of a Kind: 
+Score in this box only if the dice include 3 or more of the same number. For example, with the dice shown below you could score 18 points in the 3 of a Kind box.
+> # ⚄ ⚄ ⚄ ⚁ ⚀
+_Other Scoring Options_: You could instead score 18 in the Chance box, or you could score in the Upper Section: 15 in the Fives box, 2 in the Twos box or 1 in the Aces box.
+
+### 4 of a Kind: 
+Score in this box only if the dice include 4 or more of the same number. For example, with the dice shown below you could score 14 points in the 4 of a Kind box.
+> # ⚁ ⚁ ⚁ ⚅ ⚁
+_Other Sconhg Options:_ You could instead score 14 in the 3 of a Kind box or in the Chance box-or you could score in the Upper Section: 8 in the Twos box, or 6 in the Sixes box.
+
+### Small Straight: 
+Score in this box only if the dice show any sequence of four numbers. Any Small Straight is worth 30 points. You could score 30 points in the Small Straight box with any of the three dice combinations shown below.
+> # ⚀ ⚁ ⚂ ⚃ *
+> # ⚁ ⚂ ⚃ ⚄ *
+> # ⚂ ⚃ ⚄ ⚅ *
+
+### Full House: 
+Score in this box only if the dice show three of one number and two of another. Any Full House is worth 25 points. For example, with the dice shown below you could score 25 points in the Full House box.
+> # ⚁ ⚁ ⚁ ⚅ ⚅
+
+Other Scoring Options: You could instead score in the Chance box, or in the appropriate Upper Section box.
+
+> TODO fix below section
+---
+Large Straight: Score in
+this box only if the dice
+show any sequence offive
+numbers. Any Large
+Straight is worth 40 points.
+You could score 40 points
+in the Large Straight box
+with either of the two dice
+combinations shown below.
+.
+.
+.
+.
+.
+.
+. •
+. .
+.
+•
+.
+. .
+. •
+. •
+.
+. .
+The first YAHTZEE you
+enter in the YAHTZEE box
+is worth 50 points. For each
+additional YAHTZEE you
+roll, you earn a bonus (see
+YAHTZEE BONUS, below)!
+Chance: Score the total of
+any 5 dice in this box. This
+catch-all category comes in
+handy when you can't (or
+don't want to) score in
+another category, and don't
+want to enter a zero.
+1
+Other Scoring Options: You
+could instead score in the
+Small Straight box, the
+Chance box, or the appropriate Upper Section box.
+For example, you could score
+22 points in the Chance box
+with the dice shown below.
+.
+i
+. .
+. .
+. .
+.
+. .
+. .
+• .
+. .
+. .
+. •
+. .
+YAHTZEE: Score in this
+box only if the dice show
+five of the same number
+(5 of a kind). A YAHTZEE
+example is shown below.
+. . • . •
+YAHTZEE BONUS: If
+you roll a YAHTZEE and
+have already filled in the
+YAHTZEE box with a 50,
+you get a 100-point bonus!
+Take one bonus chip, then
+5
+place a check mark (J) in
+the YAHTZEE BONUS box
+on your score card. Then
+fill in one of the 13 boxes on
+your score card according to
+the JOKER RULES,
+described below.
+As long as you've scored 50
+in the YAHTZEE box, you
+get a YAHTZEE bonus for
+each additional YAHTZEE
+you roll -just squeeze in the
+check marks if necessaryl
+If you roll a YAHTZEE and
+have already entered zero in
+the YAHTZEE box, you do
+not am a YAHTZEE
+bonus; however, you must
+fill in one of the 13 boxes on
+your score card according to
+the JOKER RULES below.
+]OKER RULES: Score the
+total of all 5 dice in the
+appropriate Upper Section
+box. If this box has already
+been filled in, score as
+follows in any open Lower
+Section box:
+3 ofa Kind: Total of all 5 dice
+A ofa Kind: Total of all 5 dice
+Fu// House: 25 points
+SmalI Straight: 30 points
+Large Straight: 40 points
+Chance: Total oFclll 5 dice
+1
+Ifthe appropriate Upper
+Section box and all Lower
+Section boxes are filled in,
+you must enter a zero in any
+open Upper Section box.
+For example, you roll 5
+Pours. You've already
+entered zero in the
+YAHTZEE box, and have
+also scored in the Fours box
+in the Upper Section. The
+Joker rules allow you to
+score in any open box in the
+Lower Section. You decide
+to score 40 points in the
+Large Straight box.
+6
+ENDING A GAME
+How to Win
+Once each player has filled
+in all 13 category boxes,
+the game ends. Each player
+now adds up his or her score
+as follows:
+Upper Section: Add up the
+Upper Section scores and
+enter the total in the
+TOTAL SCORE box. Enter
+the 35~point bonus in the
+BONUS box ifyou scored
+63 points or more. Then
+enter the total in the
+TOTAL box.
+Lower Section: Add up the
+Lower Section scores, and
+enter the total in the
+TOTAL ofLower Section
+box. Add 100 points for
+each check mark in the
+YAHTZEE BONUS boxes
+(that is, one check mark for
+each bonus chip).
+Grand Total: Add the
+Upper Section and Lower
+Section scores, and enter
+the total in this box. This is
+your score for the game.
+After the scores are tallied,
+the player with the highest
+Grand Total wins the game!
+SOLO PLAY
+No competition around?
+Challenge yourself in solitaire
+play, and try to beat your pre;
+vious scores!
+
+---
