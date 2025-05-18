@@ -1,5 +1,5 @@
 import argparse
-from core.sections import Sections
+from sections import Sections
 from game import Game
 
 
@@ -13,7 +13,6 @@ def main():
     # Initialize the game
     games = []
     current_player = 0
-    players = 0
 
     for i in range(args.players):
         game = Game(i)
@@ -41,10 +40,10 @@ def main():
 
         print("Available categories:")
         for idx, category in enumerate(game.get_available_categories()):
-            print(f"{idx}: {category}")
+            print(category)
         
         category_choice = int(input("Choose a category by [number]: "))
-        game.score_section(Sections[category_choice])
+        game.score_section(Sections(category_choice))
         print(f"Scorecard: {game.get_score_sheet()}\n")
         current_player = (current_player + 1) % players
         game = games[current_player]

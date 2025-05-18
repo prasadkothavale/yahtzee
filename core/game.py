@@ -118,8 +118,8 @@ class Game:
         if not self.score_sheet[Sections.UPPER_SECTION_BONUS.value][1]:
             upper_section_score = 0
             for i in [Sections.ACE, Sections.TWO, Sections.THREE, Sections.FOUR, Sections.FIVE, Sections.SIX]:
-                if self.score_sheet[i][1]:
-                    upper_section_score += self.score_sheet[i][0]
+                if self.score_sheet[i.value][1]:
+                    upper_section_score += self.score_sheet[i.value][0]
             if upper_section_score >= 63:
                 self.score_sheet[Sections.UPPER_SECTION_BONUS.value] = (35, True)
 
