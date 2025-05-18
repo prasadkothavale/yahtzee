@@ -1,6 +1,7 @@
 import argparse
 from sections import Sections
 from game import Game
+from tabulate import tabulate
 
 
 
@@ -39,12 +40,21 @@ def main():
             print(f"Dice after re-roll: {game.get_dice_values()}")
 
         print("Available categories:")
-        for idx, category in enumerate(game.get_available_categories()):
-            print(category)
+        print(tabulate(game.get_available_categories(), headers=["Index", "Category", "Score"]))
         
-        category_choice = int(input("Choose a category by [number]: "))
+        category_choice = int(input("Choose a category by Index: "))
         game.score_section(Sections(category_choice))
-        print(f"Scorecard: {game.get_score_sheet()}\n")
+        
+        table = []
+        scoreSheet = game.get_score_sheet()
+        for i in range(0, len(scoreSheet)):
+            table.append([
+                Sections(i).name, 
+                scoreSheet[i][0], 
+                '✓' if scoreSheet[i][1] else '']
+            )
+        print(f"Scorecard: \n{tabulate(table[1:], headers=table[0])}\n")
+        
         current_player = (current_player + 1) % players
         game = games[current_player]
 

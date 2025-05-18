@@ -13,7 +13,7 @@ class Game:
         # Initialize dice with a list of tuples (value, keep)
         self.dice = [(0, False)] * DICE_COUNT
 
-        self.score_sheet[Sections.PLAYER.value] = player
+        self.score_sheet[Sections.PLAYER.value] = (player, False)
         self.rolls = 0
         self.rounds = 0
         
@@ -62,7 +62,7 @@ class Game:
         available_categories = []
         for i in range(1, len(self.score_sheet)):
             if not self.score_sheet[i][1] and i not in [Sections.YAHTZEE_BONUS.value, Sections.UPPER_SECTION_BONUS.value, Sections.TOTAL.value, Sections.PLAYER.value]:
-                available_categories.append(f'[{Sections(i).value}]: {Sections(i).name} ({self.get_possible_section_score(Sections(i))})')
+                available_categories.append([Sections(i).value, Sections(i).name, self.get_possible_section_score(Sections(i))])
         return available_categories
     
     def score_section(self, section):
@@ -95,8 +95,11 @@ class Game:
                 score = 25
         
         elif section == Sections.SMALL_STRAIGHT:
-            if len(set(dice_values)) >= 4:
-                score = 30
+            small_straights = [{1, 2, 3, 4}, {2, 3, 4, 5}, {3, 4, 5, 6}]
+            for straight in small_straights:
+                if (all(d in straight for d in set(dice_values))):
+                    score = 30
+                    break
         
         elif section == Sections.LARGE_STRAIGHT:
             if len(set(dice_values)) == 5:
@@ -113,7 +116,7 @@ class Game:
             raise Exception("Invalid section")
         
         if len(set(dice_values)) == 1 and self.score_sheet[Sections.YAHTZEE.value][1]:
-            self.score_sheet[Sections.YAHTZEE_BONUS.value] = (self.score_sheet[Sections.YAHTZEE_BONUS.value] + 100, True)
+            self.score_sheet[Sections.YAHTZEE_BONUS.value] = (self.score_sheet[Sections.YAHTZEE_BONUS.value][0] + 100, True)
 
         if not self.score_sheet[Sections.UPPER_SECTION_BONUS.value][1]:
             upper_section_score = 0
@@ -129,9 +132,9 @@ class Game:
         self.__reset_dice()
 
         total_score = 0
-        for i in range(1, len(self.score_sheet)):
+        for i in range(1, len(self.score_sheet) - 1):
             total_score += self.score_sheet[i][0]
-        self.score_sheet[Sections.TOTAL.value] = (total_score, True)
+        self.score_sheet[Sections.TOTAL.value] = (total_score, self.is_game_over())
 
         return self.score_sheet[:]  
     
