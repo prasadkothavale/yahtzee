@@ -1,5 +1,6 @@
 import random
 from sections import Sections
+from score_helper import score_upper_section, score_three_of_a_kind, score_four_of_a_kind, score_full_house, score_small_straight, score_large_straight, score_yahtzee, score_chance, score_yahtzee_bonus, is_yahtzee
 
 MAX_ROLLS = 3
 MAX_ROUNDS = 13
@@ -78,44 +79,10 @@ class Game:
             raise Exception("Upper section bonus will be automatically calculated if applicable, please provide the section to score")
         
         # Calculate score based on the section
-        score = 0
         dice_values = self.get_dice_values()
+        score = self.get_possible_section_score(section)
         
-        if section in [Sections.ACE, Sections.TWO, Sections.THREE, Sections.FOUR, Sections.FIVE, Sections.SIX]:
-            score = sum(d for d in dice_values if d == section.value)
-        
-        elif section == Sections.THREE_OF_A_KIND:
-            score = sum(d for d in dice_values if any(dice_values.count(d) >= 3 for d in set(dice_values)))
-
-        elif section == Sections.FOUR_OF_A_KIND:
-            score = sum(d for d in dice_values if any(dice_values.count(d) >= 4 for d in set(dice_values)))
-
-        elif section == Sections.FULL_HOUSE:
-            if len(set(dice_values)) == 2 and any(dice_values.count(value) == 3 for value in set(dice_values)):
-                score = 25
-        
-        elif section == Sections.SMALL_STRAIGHT:
-            small_straights = [{1, 2, 3, 4}, {2, 3, 4, 5}, {3, 4, 5, 6}]
-            for straight in small_straights:
-                if (all(d in straight for d in set(dice_values))):
-                    score = 30
-                    break
-        
-        elif section == Sections.LARGE_STRAIGHT:
-            if len(set(dice_values)) == 5:
-                score = 40
-
-        elif section == Sections.YAHTZEE:
-            if len(set(dice_values)) == 1:
-                score = 50
-
-        elif section == Sections.CHANCE:
-            score = sum(dice_values)
-
-        else:
-            raise Exception("Invalid section")
-        
-        if len(set(dice_values)) == 1 and self.score_sheet[Sections.YAHTZEE.value][1]:
+        if is_yahtzee(dice_values) and self.score_sheet[Sections.YAHTZEE.value][1]:
             self.score_sheet[Sections.YAHTZEE_BONUS.value] = (self.score_sheet[Sections.YAHTZEE_BONUS.value][0] + 100, True)
 
         if not self.score_sheet[Sections.UPPER_SECTION_BONUS.value][1]:
@@ -145,32 +112,31 @@ class Game:
         dice_values = self.get_dice_values()
         
         if section in [Sections.ACE, Sections.TWO, Sections.THREE, Sections.FOUR, Sections.FIVE, Sections.SIX]:
-            score = sum(d for d in dice_values if d == section.value)
+            score = score_upper_section(dice_values, section.value)
         
         elif section == Sections.THREE_OF_A_KIND:
-            score = sum(d for d in dice_values if any(dice_values.count(d) >= 3 for d in set(dice_values)))
+            score = score_three_of_a_kind(dice_values)
 
         elif section == Sections.FOUR_OF_A_KIND:
-            score = sum(d for d in dice_values if any(dice_values.count(d) >= 4 for d in set(dice_values)))
+            score = score_four_of_a_kind(dice_values)
 
         elif section == Sections.FULL_HOUSE:
-            if len(set(dice_values)) == 2 and any(dice_values.count(value) == 3 for value in set(dice_values)):
-                score = 25
+            score = score_full_house(dice_values)
         
         elif section == Sections.SMALL_STRAIGHT:
-            if len(set(dice_values)) >= 4:
-                score = 30
+            score = score_small_straight(dice_values)
         
         elif section == Sections.LARGE_STRAIGHT:
-            if len(set(dice_values)) == 5:
-                score = 40
-
+            score = score_large_straight(dice_values)
+        
         elif section == Sections.YAHTZEE:
-            if len(set(dice_values)) == 1:
-                score = 50
+            score = score_yahtzee(dice_values)
 
         elif section == Sections.CHANCE:
-            score = sum(dice_values)
+            score = score_chance(dice_values)
+        
+        else:
+            raise Exception("Invalid section")
         
         return score
     

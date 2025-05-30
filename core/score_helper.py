@@ -64,9 +64,13 @@ def score_small_straight(dice):
     Returns:
         int: The score for Small Straight, or 0 if not applicable.
     """
-    small_straights = [{1, 2, 3, 4}, {2, 3, 4, 5}, {3, 4, 5, 6}]
-    for straight in small_straights:
-        if all(d in straight for d in set(dice)):
+    sorted_dice = sorted(dice)
+    straight_count = 1
+    last = sorted_dice[0]
+    for d in sorted_dice[1:]:
+        straight_count = straight_count + 1 if d == last + 1 else 1
+        last = d
+        if straight_count == 4:
             return 30
     return 0
 
@@ -86,6 +90,10 @@ def score_large_straight(dice):
     return 0
 
 
+def is_yahtzee(dice):
+    return len(set(dice)) == 1
+
+
 def score_yahtzee(dice):
     """
     Calculate the score for the Yahtzee category.
@@ -96,7 +104,7 @@ def score_yahtzee(dice):
     Returns:
         int: The score for Yahtzee, or 0 if not applicable.
     """
-    if len(set(dice)) == 1:
+    if is_yahtzee(dice):
         return 50
     return 0
 

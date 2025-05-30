@@ -32,7 +32,10 @@ class TestScoreHelper(unittest.TestCase):
         self.assertEqual(score_helper.score_small_straight([5,4,3,1,6]), 30)
         self.assertEqual(score_helper.score_small_straight([3,4,5,6,3]), 30)
         self.assertEqual(score_helper.score_small_straight([5,4,3,2,1]), 30)
-        self.assertEqual(score_helper.score_small_straight([1,3,4,5,6]), 0)
+        self.assertEqual(score_helper.score_small_straight([1,3,4,5,6]), 30)
+        self.assertEqual(score_helper.score_small_straight([1,4,6,5,3]), 30)
+        self.assertEqual(score_helper.score_small_straight([1,1,2,3,5]), 0)
+        self.assertEqual(score_helper.score_small_straight([1,2,3,5,6]), 0)
 
     def test_score_large_straight(self):
         self.assertEqual(score_helper.score_large_straight([1,2,3,4,5]), 40)
